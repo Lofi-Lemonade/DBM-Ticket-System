@@ -5,7 +5,7 @@
   "_id": "FgxOz",
   "actions": [
     {
-      "code": "if(msg.channel.parentID == \"TICKET CATEGORY ID HERE\") {\nconst userid = msg.channel.name;\nconst u = client.users.find(user => user.id == userid);\nu.send(msg.content)\n}\n",
+      "code": "if(msg.channel.parentID == \"TICKET CATEGORY ID HERE\") {\nconst userid = msg.channel.name;\nconst u = client.users.find(user => user.id == userid);\nu.send(\"**\" + msg.author.tag + \"**\" + \": \" + msg.content)\n}\n",
       "behavior": "0",
       "interpretation": "0",
       "storage": "0",
