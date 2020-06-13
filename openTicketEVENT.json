@@ -1,0 +1,18 @@
+{
+  "name": "openTicket",
+  "temp": "",
+  "event-type": "0",
+  "_id": "jLiLA",
+  "actions": [
+    {
+      "code": "const cc = client.channels.find(channel => channel.name === msg.author.id);\nif(!cc) {\nconst guild = client.guilds.get(\"YOUR SERVER ID HERE\");\nconst category = guild.channels.find(channel => channel.id == \"TICKET CATEGORY ID HERE\" && channel.type == \"category\");\nguild.createChannel(msg.author.id, \"text\")\n.then(channel => {\n    if(!category) throw new Error(\"Category does not exist!\");\n    channel.setParent(category.id).then(channel => {\n        channel.send(msg.content)\n    });\n}).catch(console.error);\n}\nelse {\n    cc.send(msg.content)\n}\n\n\n",
+      "behavior": "0",
+      "interpretation": "0",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    }
+  ]
+}
