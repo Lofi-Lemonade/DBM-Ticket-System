@@ -1,0 +1,19 @@
+{
+  "name": "close",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "SNUmc",
+  "actions": [
+    {
+      "code": "if(msg.channel.parentID == \"TICKET CATEGORY ID HERE\") {\n    const userid = msg.channel.name;\n    const u = client.users.find(user => user.id == userid);\n    u.send(`Your ticket has been closed by ${msg.author.tag}!`).then(() => msg.channel.delete())\n}\nelse {\n    msg.channel.send(\"This is not a ticket channel!\")\n}",
+      "behavior": "0",
+      "interpretation": "0",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    }
+  ],
+  "comType": "0"
+}
