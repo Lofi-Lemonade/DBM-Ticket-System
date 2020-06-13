@@ -1,0 +1,16 @@
+{
+  "name": "respondToTicket",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "NmnsR",
+  "actions": [
+    {
+      "sourcetype": "0",
+      "source": "FgxOz",
+      "source2": "",
+      "type": "true",
+      "name": "Call Command/Event"
+    }
+  ],
+  "comType": "3"
+}
