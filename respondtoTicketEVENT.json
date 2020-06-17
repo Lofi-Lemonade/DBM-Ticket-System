@@ -13,6 +13,16 @@
       "VTypeSelect": "0",
       "CVTypeValue": "",
       "name": "Run Script"
+    },
+    {
+      "code": "    if(msg.attachments.size > 0 && msg.channel.type == \"text\") {\n        const u = client.users.find(user => user.id === msg.channel.name);\n        msg.attachments.forEach(function(attachment) {\n            u.send(attachment.url);\n        });\n    }\n    \n    else if(msg.attachments.size > 0 && msg.channel.type == \"dm\") {\n        const channelToGet = client.channels.find(channel => channel.name == msg.author.id)\n        msg.attachments.forEach(function(attachment) {\n            channelToGet.send(attachment.url);\n        });\n    }\n    \n    else {\n        console.log(\"No attachments\")\n    }",
+      "behavior": "0",
+      "interpretation": "0",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
     }
   ]
 }
